@@ -2,12 +2,12 @@ Matrix Keypad Library for PIC16F887
 ================================================================================
  Usages examples
  ----------------------------------------------------------------------------
- ```c
-  Keypad_begin(WITH_ISR)           // Initialise the Keypad with Keypad Interrupt Enabled(WITH_ISR or WITHOUT_ISR)
-  Key = Keypad_waitForKey()        // Wait until a Key is pressed(It blocks the execution)
-  Key = Keypad_getKey()            // Get the Key if pressed(Non-blocking)
-  Stat = Keypad_getKeyState(2,3)   // Get status of Key positioned at ROW 2 and COL 3(PRESSED or RELEASED)
-  Key = Keypad_ISR()               // ISR for Keypad to call from MAIN Interrupt routine
+ ```c++
+  Keypad_begin(WITH_ISR);           // Initialise the Keypad with Keypad Interrupt Enabled(WITH_ISR or WITHOUT_ISR)
+  Key = Keypad_waitForKey();        // Wait until a Key is pressed(It blocks the execution)
+  Key = Keypad_getKey();            // Get the Key if pressed(Non-blocking)
+  Stat = Keypad_getKeyState(2,3);   // Get status of Key positioned at ROW 2 and COL 3(PRESSED or RELEASED)
+  Key = Keypad_ISR();               // ISR for Keypad to call from MAIN Interrupt routine
 ```
  
  This code is written utilizing the "Interrupt on Pin Change" feature of PORTB
